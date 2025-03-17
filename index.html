@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Pets</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="">
+    <!-- component -->
+ <header
+    class="w-full mx-auto z-10 shadow-md header sticky top-0 bg-white flex items-center justify-between px-8 py-2">
+    <!-- logo -->
+    <div class="md:w-3/12 flex gap-4 flex items-center">
+      <img class="h-[29px] w-[25px] object-fit: cover"
+ src="./images/logo.webp" alt="Peddy logo">
+      <a class="text-[32px] font-black" href="#">Peddy</a>
+    </div>
+
+    <!-- navigation -->
+    <nav class="nav text-md">
+      <ul class="hidden md:flex items-center">
+        <li
+          class="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+          <a href="#">Home</a>
+        </li>
+        <li
+          class="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+          <a href="#bestDeal">Shop</a>
+        </li>
+        <li
+          class="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+          <a href="#footer">Contact</a>
+        </li>
+      </ul>
+    </nav>
+ <!-- k -->
+    <!-- dropdown menu-->
+    <div class="w-3/12 flex justify-end items-center">
+      <!-- hamburger  -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-500 focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Profile Icon -->
+      <button class="btn btn-ghost items-center bg-none p-2 rounded-full ml-4">
+        <img src="./images/user.png" alt="User Profile Icon">
+      </button>
+    </div>
+  </header>
+
+  <!-- Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute top-16 right-0 w-full text-center sticky">
+    <ul class="flex flex-col">
+      <li class="p-4 border-b border-gray-200 hover:text-green-500">
+        <a href="#">Home</a>
+      </li>
+      <li class="p-4 border-b border-gray-200 hover:text-green-500">
+        <a href="#bestDeal">Shop</a>
+      </li>
+      <li class="p-4 border-b border-gray-200 hover:text-green-500">
+        <a href="#footer">Contact</a>
+      </li>
+    </ul>
+  </div>
+    <main class="w-full lg:w-11/12 mx-auto">
+      <!-- Hero Section -->
+      <section class="text-center p-8">
+        <!-- Top Heading -->
+        <div class="text-base font-bold text-[#131313] md:mb-8 mb-2">
+          Bringing Families Together ❤
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="md:text-7xl text-3xl text-[#131313] font-black mb-4">
+          Your Path to Adoption <br />
+          Starts Here
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-[#131313] font-normal text-base max-w-md mx-auto mb-6">
+          Find your new best friend today by adopting a pet in need. Explore our
+          network of shelters and rescues to make a difference.
+        </p>
+
+        <!-- Call to Action Button -->
+        <a
+          href="#best-friend"
+          class="bg-teal-500 text-[20px] font-bold text-white px-6 py-3 rounded-lg hover:bg-teal-600 transition"
+        >
+          View More
+        </a>
+
+        <!-- Image Section -->
+        <div class="my-12">
+          <img
+            src="./images/pet.webp"
+            alt="Dog and Cat"
+            class="mx-auto max-w-full h-auto"
+          />
+        </div>
+
+        <!-- Subheading -->
+        <h2 id="best-friend" class="text-[40px] font-black text-black mb-4">
+          Adopt Your Best Friend
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-500 text-base  max-w-lg mx-auto mb-6">
+         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+
+        <!-- Categories Section -->
+        <div id="category" class="flex flex-wrap justify-center md:space-y-0 space-y-4 md:space-x-4 mb-6">
+          <!-- <button
+            onclick="loadCatagories('dog')"
+            class="bg-white w-[280px] border-2 border-slate-200 text-xl text-black font-bold p-6 rounded-lg flex items-center justify-center gap-4"
+          >
+            <img src="./images/dog.png" alt="Dog Icon" class="w-6 h-6" />
+            <span>Dogs</span>
+          </button>
+
+          <button
+            onclick="loadCatagories('cat')"
+            class="bg-white w-[280px] border-2 border-slate-200 text-xl text-black font-bold p-6 rounded-lg flex items-center justify-center gap-4 space-x-2"
+          >
+            <img src="./images/cat.png" alt="Cat Icon" class="w-6 h-6" />
+            <span>Cats</span>
+          </button>
+
+          <button
+            onclick="loadCatagories('rabbit')"
+            class="bg-white w-[280px] border-2 border-slate-200 text-xl text-black font-bold p-6 rounded-lg flex items-center justify-center gap-4 space-x-2"
+          >
+            <img src="./images/rabbit.png" alt="Rabbit Icon" class="w-6 h-6" />
+            <span>Rabbits</span>
+          </button>
+
+          <button
+            onclick="loadCatagories('bird')"
+            class="bg-white w-[280px] border-2 border-slate-200 text-xl text-black font-bold p-6 rounded-lg flex items-center justify-center gap-4 space-x-2"
+          >
+            <img src="./images/bird.png" alt="Bird Icon" class="w-6 h-6" />
+            <span>Birds</span>
+          </button> -->
+        </div>
+      </section>
+
+      <!-- best deal section  -->
+      <section>
+        <div class="flex flex-col md:flex-row items-center justify-between px-4">
+          <div>
+            <h1 class="text-3xl font-bold mb-6">Best Deal For You</h1>
+          </div>
+          <div class="text-right mb-10">
+            <button
+              onclick="sortByPrice()"
+              id="sortbtn"
+              class="w-[178px] bg-teal-500 text-white px-6 py-3 rounded-xl hover:bg-teal-600 transition"
+            >
+              Sort By Price
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- pet cards -->
+      <section id="" class="flex mx-auto my-8 px-4 items-start">
+          <!-- spinner -->
+      <div id="loading" class="hidden w-full flex justify-center py-4">
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+        <div
+          id="left-cards"
+          class="w-4/5 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mr-6"
+        ></div>
+        <div
+          id="left-cards1"
+          class="hidden w-4/5 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mr-6"
+        ></div>
+
+        <div
+          id="right-cards"
+          class="w-1/5 border-2 rounded-xl min-h-[900px] flex flex-wrap content-start"
+        ></div>
+      </section>
+
+      <!-- details modal -->
+      <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+      <dialog id="my_modal_1" class="modal" onload="detailsModalData()" on>
+        <div class="modal-box" id='detailsModal' >
+          <!-- <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn" onclick="CloseDetailsModal()">Close</button>
+            </form>
+          </div> -->
+        </div>
+      </dialog>
+
+      <!-- Adopt modal -->
+       <dialog id="my_modal_2" class="modal" onload="detailsModalData()" on>
+        <div class="modal-box" id='detailsModal2' >
+          <!-- <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn" onclick="CloseDetailsModal()">Close</button>
+            </form>
+          </div> -->
+        </div>
+      </dialog>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white p-24">
+      <div class="container mx-auto flex flex-wrap justify-between">
+        <!-- Left Section -->
+        <div class="w-full md:w-1/3 mb-6">
+          <div class="flex gap-4 mb-3">
+            <img src="./images/logo.webp" alt="" />
+            <p class="text-xl font-bold">Pet Heaven</p>
+          </div>
+          <p class="mb-1">Location: av. Washington 165, NY CA 54003</p>
+          <p class="mb-1">Phone: +1 85 964 47 25</p>
+          <p class="mb-1">Email: info@yourdomain.com</p>
+          <p>Opening hours: 9:00 AM - 5:00 PM</p>
+          <div class="mt-4 flex space-x-4">
+            <a
+              href="https://www.facebook.com/"
+              class="text-gray-400 hover:text-teal-400"
+              ><img src="./images/facebook.png" alt=""
+            /></a>
+            <a href="https://x.com/" class="text-gray-400 hover:text-teal-400"
+              ><img src="./images/twitter.png" alt=""
+            /></a>
+            <a
+              href="https://www.youtube.com/"
+              class="text-gray-400 hover:text-teal-400"
+              ><img src="./images/youtube.png" alt=""
+            /></a>
+            <a
+              href="https://www.instagram.com/"
+              class="text-gray-400 hover:text-teal-400"
+              ><img src="./images/instagram (1).png" alt=""
+            /></a>
+          </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="w-full md:w-1/3 mb-6">
+          <h3 class="text-lg font-semibold mb-2">Useful Links</h3>
+          <ul>
+            <li class="mb-1">
+              <a href="#" class="text-gray-400 hover:text-teal-400">Home</a>
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-gray-400 hover:text-teal-400">About Us</a>
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-gray-400 hover:text-teal-400">Animals</a>
+            </li>
+            <li class="mb-1">
+              <a href="#" class="text-gray-400 hover:text-teal-400"
+                >Foundation</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-teal-400">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Section -->
+        <div class="w-full md:w-1/3 mb-6">
+          <h3 class="text-lg font-semibold mb-2">Drop a Message</h3>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="w-[240px] p-2 bg-slate-500 mb-2 border border-gray-600 text-white rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+          />
+          <button
+            class="w-[240px] bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="pets2.js"></script> -->
+    <!-- <script src="saikat.js"></script> -->
+    <script src="./peddy.js"></script>
+  </body>
+</html>
